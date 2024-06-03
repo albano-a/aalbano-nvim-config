@@ -15,6 +15,9 @@ vim.opt.backup = false
 -- vim.opt.undodir = os.getenv("Home") .. "/.vim/undodir"
 vim.opt.undofile = true
 
+-- To ALWAYS use the clipboard for ALL operations:
+-- vim.opt.clipboard += unnamedplus
+
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 

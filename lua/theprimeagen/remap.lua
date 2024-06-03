@@ -76,3 +76,7 @@ end
 -- Bind the function to a key mapping (optional)
 vim.api.nvim_set_keymap('n', '<C-b>', ':lua Termpy()<CR>', { noremap = true, silent = true })
 
+vim.keymap.set('i', '"', '""<Left>', { noremap = true }) 
+vim.keymap.set('i', "'", "''<Left>", { noremap = true }) 
+vim.keymap.set('i', '{', '{}<Left>', { noremap = true }) 
+vim.keymap.set('i', '[', '[]<Left>', { noremap = true }) 
