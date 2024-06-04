@@ -21,16 +21,6 @@ return require('packer').startup(function(use)
 	end	
   })
 
-  use {
-  "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    requires = { 
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-    }
-  }
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
@@ -44,20 +34,16 @@ return require('packer').startup(function(use)
 	  branch = 'v3.x',
 	  requires = {
 		  --- Uncomment the two plugins below if you want to manage the language servers from neovim
-		  {'williamboman/mason.nvim'},
-		  {'williamboman/mason-lspconfig.nvim'},
+		  -- {'williamboman/mason.nvim'},
+		  -- {'williamboman/mason-lspconfig.nvim'},
 		  {'neovim/nvim-lspconfig'},
 		  {'hrsh7th/nvim-cmp'},
 		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'L3MON4D3/LuaSnip'},
 	  }
   }
-
-  use {
-        "williamboman/mason.nvim"
-  }
   
-  use('jose-elias-alvarez/null-ls.nvim')
+  -- use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
   use('neoclide/coc.nvim', {run = 'release'})
 
