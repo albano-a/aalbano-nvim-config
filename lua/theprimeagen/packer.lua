@@ -13,21 +13,40 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use({
-	'rose-pine/neovim',
-	as = 'rose-pine',
-	config = function()
-		vim.cmd('colorscheme rose-pine')
-	end	
-  })
+  use {
+      'daltonmenezes/aura-theme',
+      rtp = 'packages/neovim',
+      config = function()
+          vim.cmd("colorscheme aura-dark") -- Or any Aura theme available
+      end
+  }
 
+  use {
+      'nvimdev/dashboard-nvim',
+      event = 'VimEnter',
+      config = function()
+          require('dashboard').setup {
+              -- config
+          }
+      end,
+      requires = {'nvim-tree/nvim-web-devicons'}
+  }
+
+  use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+          'nvim-tree/nvim-web-devicons', -- optional
+      },
+  }
+  use('nvim-tree/nvim-web-devicons')
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-  use('github/copilot.vim')
+  use('tpope/vim-commentary')
+  -- use('github/copilot.vim')
   use('pocco81/auto-save.nvim')
   use {
 	  'VonHeikemen/lsp-zero.nvim',

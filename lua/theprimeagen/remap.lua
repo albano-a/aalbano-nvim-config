@@ -1,6 +1,6 @@
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -75,6 +75,8 @@ end
 
 -- Bind the function to a key mapping (optional)
 vim.api.nvim_set_keymap('n', '<C-b>', ':lua Termpy()<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true})
 
 vim.keymap.set('i', '"', '""<Left>', { noremap = true }) 
 vim.keymap.set('i', "'", "''<Left>", { noremap = true }) 
