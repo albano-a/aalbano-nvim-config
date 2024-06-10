@@ -84,6 +84,14 @@ _G.packer_plugins = {
     path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\auto-save.nvim",
     url = "https://github.com/pocco81/auto-save.nvim"
   },
+  ["barbecue.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rbarbecue\frequire\0" },
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\barbecue.nvim",
+    url = "https://github.com/utilyre/barbecue.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
@@ -126,6 +134,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-navic"] = {
+    loaded = true,
+    path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-navic",
+    url = "https://github.com/SmiteshP/nvim-navic"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -192,6 +205,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  vimtex = {
+    loaded = true,
+    path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
@@ -200,6 +218,15 @@ time([[Defining packer_plugins]], false)
 time([[Config for tokyonight.nvim]], true)
 try_loadstring("\27LJ\2\nq\0\0\3\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\3\0009\0\4\0'\2\5\0B\0\2\1K\0\1\0!colorscheme tokyonight-storm\bcmd\bvim\nsetup\15tokyonight\frequire\0", "config", "tokyonight.nvim")
 time([[Config for tokyonight.nvim]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-web-devicons ]]
+vim.cmd [[ packadd barbecue.nvim ]]
+
+-- Config for: barbecue.nvim
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rbarbecue\frequire\0", "config", "barbecue.nvim")
+
+time([[Sequenced loading]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

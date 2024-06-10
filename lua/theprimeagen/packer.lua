@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
       end
   }
 
+  -- This plugin adds a dashboard to neovim
   use {
       'nvimdev/dashboard-nvim',
       event = 'VimEnter',
@@ -34,6 +35,25 @@ return require('packer').startup(function(use)
       requires = {'nvim-tree/nvim-web-devicons'}
   }
 
+  -- Breadcrumbs
+  use {
+      "SmiteshP/nvim-navic",
+      requires = "neovim/nvim-lspconfig"
+  }
+  use({
+      "utilyre/barbecue.nvim",
+      tag = "*",
+      requires = {
+          "SmiteshP/nvim-navic",
+          "nvim-tree/nvim-web-devicons", -- optional dependency
+      },
+      after = "nvim-web-devicons", -- keep this if you're using NvChad
+      config = function()
+          require("barbecue").setup()
+      end,
+  })
+
+ 
   use {
       'nvim-tree/nvim-tree.lua',
       requires = {
@@ -42,7 +62,8 @@ return require('packer').startup(function(use)
   }
   use('nvim-tree/nvim-web-devicons')
 
-  use('feline-nvim/feline.nvim')
+  use('lervag/vimtex') -- Adds support for LaTeX
+  use('feline-nvim/feline.nvim') -- Adds the bar at the bottom
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
