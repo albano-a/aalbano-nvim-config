@@ -65,9 +65,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Makes a C file executable then runs it
-vim.keymap.set("n", "<leader>b", "<cmd>!gcc % -o %< && ./%<CR>", {silent=true})
--- Makes a C++ file executable then runs it
-vim.keymap.set("n", "<leader>cc", "<cmd>!g++ % -o %< && ./%<CR>", { silent = true })
+vim.keymap.set("n", "<leader>b", "<cmd>execute '!gcc ' . shellescape(expand('%:p')) . ' -o ' . shellescape(expand('%:p:r')) . ' && ' . shellescape(expand('%:p:r'))<CR>", {silent=true})
 
 -- Inserts a basic error handling block in Go
 vim.keymap.set(
