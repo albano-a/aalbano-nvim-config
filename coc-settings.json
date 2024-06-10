@@ -1,5 +1,9 @@
 {
   "clangd.path": "~\\AppData\\Local\\coc\\extensions\\coc-clangd-data\\install\\18.1.3\\clangd_18.1.3\\bin\\clangd.exe",
+  "clangd.arguments": [
+        "--query-driver = C:\\MinGW\\bin\\gcc.exe",
+        "--background-index"
+  ],
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact",
@@ -8,7 +12,7 @@
     "astro": "html",
     "astro-html": "html",
     "astro-markdown": "markdown",
-    "astro-toml": "toml",
-  },
+    "astro-toml": "toml"
+  }
 }
 
