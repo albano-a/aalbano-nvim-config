@@ -14,10 +14,12 @@ return require('packer').startup(function(use)
   }
 
   use {
-      'daltonmenezes/aura-theme',
-      rtp = 'packages/neovim',
+      'folke/tokyonight.nvim',
+      lazy = false,
+      priority = 1000,
       config = function()
-          vim.cmd("colorscheme aura-dark") -- Or any Aura theme available
+          require('tokyonight').setup({})
+          vim.cmd("colorscheme tokyonight-storm") -- Or any Tokyo theme available
       end
   }
 
@@ -40,6 +42,7 @@ return require('packer').startup(function(use)
   }
   use('nvim-tree/nvim-web-devicons')
 
+  use('feline-nvim/feline.nvim')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')

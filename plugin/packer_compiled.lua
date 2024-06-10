@@ -79,12 +79,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["aura-theme"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme aura-dark\bcmd\bvim\0" },
-    loaded = true,
-    path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\aura-theme\\packages/neovim",
-    url = "https://github.com/daltonmenezes/aura-theme"
-  },
   ["auto-save.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\auto-save.nvim",
@@ -107,6 +101,11 @@ _G.packer_plugins = {
     only_cond = false,
     path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\dashboard-nvim",
     url = "https://github.com/nvimdev/dashboard-nvim"
+  },
+  ["feline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\feline.nvim",
+    url = "https://github.com/feline-nvim/feline.nvim"
   },
   harpoon = {
     loaded = true,
@@ -173,6 +172,12 @@ _G.packer_plugins = {
     path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    config = { "\27LJ\2\nq\0\0\3\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\3\0009\0\4\0'\2\5\0B\0\2\1K\0\1\0!colorscheme tokyonight-storm\bcmd\bvim\nsetup\15tokyonight\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   undotree = {
     loaded = true,
     path = "C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\undotree",
@@ -191,14 +196,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Runtimepath customization
-time([[Runtimepath customization]], true)
-vim.o.runtimepath = vim.o.runtimepath .. ",C:\\Users\\Icarl\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\aura-theme\\packages/neovim"
-time([[Runtimepath customization]], false)
--- Config for: aura-theme
-time([[Config for aura-theme]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme aura-dark\bcmd\bvim\0", "config", "aura-theme")
-time([[Config for aura-theme]], false)
+-- Config for: tokyonight.nvim
+time([[Config for tokyonight.nvim]], true)
+try_loadstring("\27LJ\2\nq\0\0\3\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\3\0009\0\4\0'\2\5\0B\0\2\1K\0\1\0!colorscheme tokyonight-storm\bcmd\bvim\nsetup\15tokyonight\frequire\0", "config", "tokyonight.nvim")
+time([[Config for tokyonight.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
