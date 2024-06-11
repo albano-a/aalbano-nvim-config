@@ -1,5 +1,4 @@
-
-
+-- These remaps are personalized from theprimeagen
 
 -- Save command
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
@@ -75,7 +74,7 @@ vim.keymap.set(
 )
 
 -- Opens the Packer configuration file
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e $HOME/AppData/Local/nvim/lua/theprimeagen/packer.lua<CR>");
 
 -- Runs the CellularAutomaton command 'make_it_rain'
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");

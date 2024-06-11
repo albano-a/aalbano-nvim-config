@@ -70,8 +70,8 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('tpope/vim-commentary')
-  use('MunifTanjim/prettier.nvim')
   use('neoclide/coc.nvim', {run = 'release'})
+  -- use('MunifTanjim/prettier.nvim')
   use('pocco81/auto-save.nvim')
   use {
 	  'VonHeikemen/lsp-zero.nvim',
