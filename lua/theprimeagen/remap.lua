@@ -89,9 +89,9 @@ vim.api.nvim_set_keymap('n', '<C-b>', '<cmd>!python % <CR>', { noremap = true, s
 
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true})
 
-vim.keymap.set('i', '"', '""<Left>', { noremap = true }) 
-vim.keymap.set('i', "'", "''<Left>", { noremap = true }) 
-vim.keymap.set('i', '{', '{}<Left>', { noremap = true }) 
-vim.keymap.set('i', '[', '[]<Left>', { noremap = true })
-vim.keymap.set('i', '(', '()<Left>', { noremap = true })
+-- vim.keymap.set('i', '"', '""<Left>', { noremap = true }) 
+-- vim.keymap.set('i', "'", "''<Left>", { noremap = true }) 
+-- vim.keymap.set('i', '{', '{}<Left>', { noremap = true }) 
+-- vim.keymap.set('i', '[', '[]<Left>', { noremap = true })
+-- vim.keymap.set('i', '(', '()<Left>', { noremap = true })
 
