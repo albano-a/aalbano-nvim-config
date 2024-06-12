@@ -87,11 +87,11 @@ return require('packer').startup(function(use)
 	  }
   }
   
-
-  use {
-		'michaelb/sniprun',
-		run = 'sh install.sh'
-  }
+    -- Adds a term
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end}  
+  
     
  
 end)
