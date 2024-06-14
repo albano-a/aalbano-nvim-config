@@ -70,7 +70,17 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('tpope/vim-commentary')
-  use('neoclide/coc.nvim', {run = 'release'})
+
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
+    use("hrsh7th/cmp-cmdline")
+    use("L3MON4D3/LuaSnip")
+    use("saadparwaiz1/cmp_luasnip")
+    use("j-hui/fidget.nvim")
+  
+  use('hrsh7th/nvim-cmp')
+  use('hrsh7th/cmp-nvim-lsp')
+
   -- use('MunifTanjim/prettier.nvim')
   use('pocco81/auto-save.nvim')
   use {
