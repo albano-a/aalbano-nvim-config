@@ -5,7 +5,7 @@ return {
         require 'nvim-treesitter.install'.compilers = { "clang" }
         local config = require('nvim-treesitter.configs')
         config.setup({
-            ensure_installed = {"lua", "javascript", "python", "c", "html", "vim", "vimdoc"},
+            auto_install = true,
             highlight = { enable = true},
             indent = { enable = true },
         })
