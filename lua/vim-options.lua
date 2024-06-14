@@ -6,6 +6,7 @@ vim.opt.nu=true
 vim.opt.relativenumber=true
 vim.g.mapleader = " "
 
+vim.opt.wrap = false
 
 -- REMAPS
 -- Save command
