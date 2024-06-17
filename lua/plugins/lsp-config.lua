@@ -21,7 +21,7 @@ return {
 
             local lspconfig = require("lspconfig")
             local servers = {
-                "lua_ls", "clangd", "cssls", "emmet_ls", "rust_analyzer","tsserver", "html", "ltex", "marksman", "pyright"
+                "lua_ls", "clangd", "cssls", "emmet_ls", "rust_analyzer","tsserver", "html", "marksman", "pyright"
             }
             for _, lsp in ipairs(servers) do
                 lspconfig[lsp].setup({
